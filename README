@@ -1,0 +1,28 @@
+HMM POS Tagger (tagger.py)
+10/23/2012
+
+This program was originally written by Tristan Euan Chong as a project for LING
+570 at the University of Washington. Given a corpus of Korean text annotated 
+with a modified Treebank tag set, it estimates transition and emission
+probability matrices. Using a supplied Viterbi decoder (viterbi.pl) and Python
+wrapper (Viterbi.py), it then reads a test file and outputs the best tag 
+sequence for each line (viterbi-out.txt). The tagger's output file (output.txt)
+contains the tagged output assigned to the test set, with mismatches against
+the gold standard noted by asterisks, e.g. "**NNX**". It also contains the 
+total number of morphemes evaluated and the accuracy of the tagger. 
+
+Data:
+korean-training.txt
+korean-testing.txt
+korean-testing-tagged.txt
+
+Supplied programs:
+viterbi.pl
+Viterbi.py
+
+Generated files:
+e_prob_matrix.txt - emission probability matrix
+t_prob_matrix.txt - transition probability matrix
+korean-testing-formatted.txt - test file, formatted for the Viterbi decoder
+viterbi-out.txt - output of Viterbi decoder
+output.txt - output of tagger, with mismatches and accuracy rating
